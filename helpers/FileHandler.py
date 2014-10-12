@@ -27,7 +27,7 @@ class FileHandler:
         
         
     #spit file data and store it in memory
-    def split(self, file_path=None):
+    def read(self, file_path=None):
         
         #if a new file is given load file data
         if file_path is not None:
@@ -43,9 +43,9 @@ class FileHandler:
     def copy(self, out_file_path, in_file_path=None):
         start = time.time()
         if in_file_path is not None:
-            self.split(in_file_path)
+            self.read(in_file_path)
         else:
-            self.split()
+            self.read()
         
         output_file = WriteFile(out_file_path)
         output_reference = output_file.getReference()

@@ -23,7 +23,6 @@ class ReadFile:
                 #if there is a trailing slash remove it
                 if last_char == '/':
                     self.basepath = basepath[:-1]
-                    print self.basepath
                     
             except Exception as e:
                 raise Exception("Read File exception %s on %s"  % (e, file_path))
